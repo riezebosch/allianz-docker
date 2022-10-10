@@ -24,8 +24,8 @@ metadata:
   name: api
 spec:
   selector:
-    app: api
-    name: html
+    app: demo
+    name: api
   ports:
     - protocol: TCP
       port: 80
