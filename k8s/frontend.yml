@@ -16,3 +16,17 @@ spec:
         limits:
           memory: 256Mi
           cpu: 500m
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: html
+spec:
+  selector:
+    app: demo
+    name: html
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: http
