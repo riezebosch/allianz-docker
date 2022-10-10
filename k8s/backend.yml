@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: html
+  name: api
   labels:
     app: demo
-    name: html
+    name: api
 spec:
   containers:
     - name: html
-      image: localhost:5000/html:latest
+      image: localhost:5000/api:latest
       ports:
         - name: http
           containerPort: 80
