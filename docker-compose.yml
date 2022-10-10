@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  html:
+    build: ./frontend
+    container_name: html
+
+  api:
+    build: ./backend
+    container_name: api
+
+  proxy:
+    build: ./proxy
+    container_name: proxy
+    depends_on:
+      - api
+      - html
+    ports:
+      - 1234:80
+
+networks:
+  default:
+    name: demo # https://docs.docker.com/compose/networking/
